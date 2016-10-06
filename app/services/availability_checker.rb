@@ -9,6 +9,7 @@ class AvailabilityChecker
     @ride.capacity - number_of_bookings
   end
 
+  private
 
   def number_of_bookings
     Booking.where(connection: connections).sum(:pax)
