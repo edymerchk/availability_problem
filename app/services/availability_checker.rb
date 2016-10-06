@@ -16,10 +16,10 @@ class AvailabilityChecker
   end
 
   def connections
-    between_touching_coonections + arround_coonections
+    between_touching_connections + arround_coonections
   end
 
-  def between_touching_coonections
+  def between_touching_connections
     Stop.between(@departure_stop, @arrival_stop).map do |stop|
       stop.connections
     end.flatten.uniq
